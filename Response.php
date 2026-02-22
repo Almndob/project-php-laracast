@@ -1,0 +1,6 @@
+<?php
+// THIS CLASS FOR AUTHORIZED AND IF THE RESOURCE IS NOT EXITS
+class Response{
+    const NOT_FOUND = 404;
+    const FORBIDDEN = 403;
+}
