@@ -32,7 +32,7 @@
       
       <form method="post" class="mt-6">
         <label for="body">Create a note</label>
-        <textarea name="body" id="body" cols="30" rows="10" class="w-full border-gray-300 rounded-md shadow-sm focus:ring focus:ring-blue-200 focus:border-blue-300"></textarea>
+        <textarea name="body" id="body" cols="30" rows="10" class="w-full border-gray-300 rounded-md shadow-sm focus:ring focus:ring-blue-200 focus:border-blue-300"><?= $_POST['body'] ?? '' ?></textarea>
         <button type="submit" class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">Create Note</button>
       </form>
 
