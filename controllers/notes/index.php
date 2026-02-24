@@ -1,9 +1,9 @@
 <?php
 // require 'database.php';
 
-$page = 'Notes';
 
-$config = require('config.php');
+
+$config = require(base_path('config.php'));
 
 $db = new Database($config['database']);
 
@@ -17,10 +17,11 @@ $notesInfo = $db->query("
     INNER JOIN users ON notes.user_id = users.id;
 ")->get();
 
-//  $notesInfo = $db->query("SELECT * FROM notes")->fetchAll();
 
-//  dd($notes['body']);
 
-require 'views/notes.view.php';
+view("notes/index.view.php",[
+    'page' => 'Notes',
+    'notesInfo' => $notesInfo
+]);
 
 

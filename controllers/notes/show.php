@@ -1,6 +1,6 @@
 <?php
 
-    $config = require('config.php');
+    $config = require(base_path('config.php'));
     $db= new Database($config['database']);
     $page = "A Note";
     $currentUserId = 1;
@@ -16,4 +16,4 @@
     authorize($note['user_id'] === $currentUserId);
     
 
-require 'views/note.view.php';
+require base_path('views/notes/show.view.php');

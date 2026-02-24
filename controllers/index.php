@@ -1,5 +1,6 @@
 <?php
 // this variable will help us identify the current page
-$page = 'Home'; 
-
-require "views/index.view.php";
+// this variable will be used in the header to highlight the current page in the navigation bar
+view('index.view.php', [
+    'page' => 'Home'
+]);

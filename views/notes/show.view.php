@@ -1,6 +1,6 @@
-<?php include "partials/head.php"; ?>
-<?php include "partials/nav.php"; ?>
-<?php include "partials/banner.php"; ?>
+<?php require (__DIR__.'/../partials/head.php') ; ?>
+<?php require (__DIR__.'/../partials/nav.php') ; ?>
+<?php require (__DIR__.'/../partials/banner.php') ; ?>
 
 <main class="min-h-screen bg-gray-50 py-10">
     <div class="max-w-3xl mx-auto px-6">
@@ -48,4 +48,4 @@
     </div>
 </main>
 
-<?php include "partials/footer.php"; ?>
+<?php include "views/partials/footer.php"; ?>

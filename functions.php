@@ -20,4 +20,13 @@ function authorize($condition, $status = Response::FORBIDDEN){
         abbort($status);
     }
 }
-
+//This function will help us to generate the full path of the file we want to include in our views and controllers
+function base_path($path){
+    return  BASE_PATH . $path;
+}
+function view($path, $attributes = []){
+    // Converts array keys into variables so they can be used directly in the view.
+    //improt variables from the attributes array to be used in the view
+    extract($attributes);
+    require base_path('views/'. $path);
+}

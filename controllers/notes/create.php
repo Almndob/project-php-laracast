@@ -1,7 +1,7 @@
 <?php
 $page = "Create Note";
-require 'Validate.php';
-$config = require('config.php');
+require base_path('Validate.php');
+$config = require(base_path('config.php'));
 $db = new Database($config['database']);
 $errors = [];
 $seccus = [];
@@ -32,4 +32,4 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     }
 }
 
-require 'views/note-create.view.php';
+require base_path('views/notes/create.view.php');
